@@ -4,8 +4,8 @@ import json
 import pandas as pd
 
 def info(archive_name, values):
-   # with open(f'namepatch/{archive_name}', "rb") as archive_xml:
-    with open(f'nfs/{archive_name}', "rb") as archive_xml:
+   
+    with open(f'PatchArchives/{archive_name}', "rb") as archive_xml:
         dic_archive = xmltodict.parse(archive_xml)
         
         # -- Parametros do arquivo XML 
