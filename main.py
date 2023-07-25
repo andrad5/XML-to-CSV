@@ -43,13 +43,13 @@ def info(archive_name, values):
 
 
 list_archive = os.listdir("nfs")
-
+#Alterar o titulo de cada info
 columns = ["Info_I", "Info_II", "Info_III", "Info_IV", "Info_V"]
 values = []
 
 for archive_name in list_archive:
     info(archive_name, values)
-
+#Nome do seu arquivo, pode ser .xlsx ou .csv
 table = pd.DataFrame(columns=columns, data=values)
 table.to_excel("NameArchive.xlsx", index=False)
 
