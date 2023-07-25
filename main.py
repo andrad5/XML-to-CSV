@@ -1,3 +1,9 @@
+# PatchArchives >> Pasta onde estao os carquivos xml
+#Na parte parametros de arquivo XML, vai por os dados que voce deseja converter para CSV.
+#Caso o codigo nao leia ou encontre algum erro, aparecera uma mensagem ~~ E R R O ~~ e qual 
+#parametro nao foi localizado
+#
+
 import xmltodict
 import os
 import json
@@ -46,3 +52,4 @@ for archive_name in list_archive:
 
 table = pd.DataFrame(columns=columns, data=values)
 table.to_excel("NameArchive.xlsx", index=False)
+
